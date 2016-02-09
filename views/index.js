@@ -38,6 +38,8 @@ var quotes = [{
 var rand = Math.floor((Math.random() * quotes.length));
 var quotee = quotes[rand].quote;
 
+
+
 function QuoteFunction()
 {
   ReactDOM.render(
@@ -57,6 +59,18 @@ function CharacterFunction()
 
 function RandomFunction()
 {
+  var autoor = quotes.map(function(content, index){
+    return content.author;
+  });
+
+  ReactDOM.render(
+    React.createElement('h1', null, autoor),
+    document.getElementById('example3')
+  );
+
+
+
+
   /*
   function CreeTableau()
   {
@@ -91,20 +105,12 @@ function RandomFunction()
         document.getElementById('example3')
       );
     }
-    */
-
-    var autoor = quotes.map(function(content, index){
-
-      return content.author;
-
-    });
-
-    console.log(autoor);
+*/
 
 
 
 
-  }
+
 
 
 
